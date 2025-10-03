@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter to Soumika</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .letter {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 600px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+    position: relative;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2em;
+    color: #ff6f61;
+    animation: bounce 2s infinite;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    border-right: 3px solid #ff3d00;
+    overflow: hidden;
+    width: 0;
+    animation: typing 5s steps(80, end) forwards, blink 0.75s step-end infinite;
+    margin-top: 20px;
+  }
+
+  .name {
+    color: #ff3d00;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff3d00, 0 0 20px #ff6f61;
+    animation: glow 2s infinite alternate;
+  }
+
+  @keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #ff3d00, 0 0 15px #ff6f61; }
+    to { text-shadow: 0 0 15px #ff3d00, 0 0 25px #ff6f61; }
+  }
+
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+
+  /* Floating hearts */
+  .heart {
+    position: absolute;
+    color: #ff3d00;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    50% { transform: translateY(-200px) scale(1.2); opacity: 0.7; }
+    100% { transform: translateY(-400px) scale(0.8); opacity: 0; }
+  }
+
+  /* Twinkling stars */
+  .star {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    opacity: 0;
+    animation: twinkle 2s infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.2; transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+  <div class="letter">
+    <h1>To My Dearest <span class="name">Soumika</span></h1>
+    <p>
+You are more than just a friend; you are my pillar of strength. You have always supported me, guided me when I was lost, and stood by me when everyone else walked away. Your presence brings comfort, your words bring clarity, and your kindness reminds me that true friendship exists. I am endlessly grateful for everything you have done, for believing in me when I doubted myself, and for showing me the right path time and again. Soumika, you aren’t just a friend—you are a blessing in my life.
+    </p>
+  </div>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left:10%; animation-delay:0s;">❤</div>
+  <div class="heart" style="left:30%; animation-delay:2s;">💖</div>
+  <div class="heart" style="left:50%; animation-delay:1s;">❤</div>
+  <div class="heart" style="left:70%; animation-delay:3s;">💖</div>
+  <div class="heart" style="left:90%; animation-delay:1.5s;">❤</div>
+
+  <!-- Twinkling stars -->
+  <div class="star" style="top:10%; left:20%; animation-duration:2s;"></div>
+  <div class="star" style="top:30%; left:60%; animation-duration:1.5s;"></div>
+  <div class="star" style="top:50%; left:40%; animation-duration:2.5s;"></div>
+  <div class="star" style="top:70%; left:80%; animation-duration:1.8s;"></div>
+  <div class="star" style="top:20%; left:70%; animation-duration:2.2s;"></div>
+</body>
+</html>
